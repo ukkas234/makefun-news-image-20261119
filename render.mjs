@@ -327,7 +327,7 @@ function globe() {
   s += `<ellipse cx="${cx}" cy="272" rx="42" ry="7" fill="${C.amber}"/>`;
   s += `<ellipse cx="${cx}" cy="270" rx="42" ry="7" fill="${C.amber}" fill-opacity="0.25"/>`;
   for (const [hx, hy] of [[762, 248], [800, 240], [838, 248]]) {
-    s += `<circle cx="${hx}" cy="${hy}" r="8" fill="${C.navy}" stroke="${C.ivory}" stroke-opacity="0.9" stroke-width="1.4"/>`;
+    s += `<circle cx="${hx}" cy="${hy}" r="9" fill="${C.navy}" stroke="${C.ivory}" stroke-opacity="0.9" stroke-width="1.4"/>`;
     s += `<path d="M ${hx - 12} ${hy + 24} Q ${hx} ${hy + 6} ${hx + 12} ${hy + 24}" fill="none" stroke="${C.ivory}" stroke-opacity="0.9" stroke-width="1.4"/>`;
   }
   s += `</g>`;
@@ -345,7 +345,7 @@ function connectors() {
   for (const { from, to } of pts) {
     const [fx, fy] = from, [tx, ty] = to;
     const mx = (fx + tx) / 2, my = Math.max(fy, ty) - 8;
-    s += `<path d="M ${fx} ${fy} Q ${mx} ${my} ${tx} ${ty}" fill="none" stroke="${C.steel}" stroke-opacity="0.5" stroke-width="1.4"/>`;
+    s += `<path d="M ${fx} ${fy} Q ${mx} ${my} ${tx} ${ty}" fill="none" stroke="${C.steel}" stroke-opacity="0.65" stroke-width="1.8"/>`;
     s += `<circle cx="${tx}" cy="${ty}" r="4" fill="${C.steel}"/>`;
   }
   return s;
